@@ -1,0 +1,42 @@
+
+if [ $# -eq 3 ]
+ then
+  num1=$1
+  smb=$2
+  num2=$3
+ else
+ echo "Informe o primeiro valor: "
+ read num1
+
+ echo "Informe a operação: "
+ read smb
+
+ echo "Informe o segundo valor: "
+ read num2
+
+ fi
+if [ $smb = "+" ]
+then
+ cal=$((num1 + num2))
+ echo ""
+ echo "A resposta é: $cal"
+fi
+if [ $smb = "-" ]
+then
+ cal=$((num1 - num2))
+  echo ""
+ echo "A resposta é: $cal"
+fi
+if [ $smb = "x" ]
+then
+ cal=$((num1 * num2))
+ echo ""
+ echo "A resposta é: $cal"
+fi
+if [ $smb = "/" ]
+then
+ if [ $num2 -eq 0 ]
+ then
+   echo "operação invalida"
+   exit
+fi
